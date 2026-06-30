@@ -21,9 +21,10 @@ export default function App() {
       <main>
         <ShowSelection shows={tvShows} setSelectedShow={setSelectedShow}/>
         <ShowDetails selectedShow={selectedShow}/>
+        <div className="episodes-layout">
         <EpisodeList name={selectedShow?.name} episodes={selectedShow?.episodes} selectedEpisode={selectedEpisode} setSelectedEpisode={setSelectedEpisode}/>
         <EpisodeDetails episode={selectedEpisode}/>
-
+        </div>
       </main>
     </>
   );

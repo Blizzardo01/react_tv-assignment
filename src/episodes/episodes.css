@@ -1,9 +1,23 @@
+.episodes-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.episodes {
+  flex: 1;
+  min-width: 220px;
+}
+
 .episodes ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .episodes li {
   padding: 0.5rem;
+  border-bottom: 1px solid #333;
 }
 
 .episodes li:hover,
@@ -12,12 +26,38 @@
   cursor: pointer;
 }
 
-.episodes li:not(:last-child) {
-  border-bottom: 1px solid #333;
-}
-
 .episode-details {
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 1ch;
+
+  padding: 1rem;
+  border-left: 1px solid #333;
+}
+
+
+.episode-details button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+
+.episode-details button:hover {
+  background: #666;
+}
+
+
+@media (max-width: 700px) {
+  .episodes-layout {
+    flex-direction: column;
+  }
+
+  .episode-details {
+    border-left: none;
+    border-top: 1px solid #333;
+  }
 }
