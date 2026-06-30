@@ -9,7 +9,6 @@ export default function ShowDetails({selectedShow}) {
   </div>;
   } else {
   return <div className="show-details">
-    <h1>{selectedShow.name}</h1>
   </div>;
   }
 }

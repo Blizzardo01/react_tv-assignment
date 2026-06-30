@@ -3,6 +3,7 @@ import ShowSelection from "./shows/ShowSelection";
 import ShowDetails from "./shows/ShowDetails";
 import {tvShows} from "./shows/data";
 import EpisodeList from "./episodes/EpisodeList";
+import EpisodeDetails from "./episodes/EpisodeDetails";
 
 /**
  * React TV is an web streaming platform that allows users to browse
@@ -21,6 +22,7 @@ export default function App() {
         <ShowSelection shows={tvShows} setSelectedShow={setSelectedShow}/>
         <ShowDetails selectedShow={selectedShow}/>
         <EpisodeList name={selectedShow?.name} episodes={selectedShow?.episodes} selectedEpisode={selectedEpisode} setSelectedEpisode={setSelectedEpisode}/>
+        <EpisodeDetails episode={selectedEpisode}/>
 
       </main>
     </>
