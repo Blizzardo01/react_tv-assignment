@@ -7,6 +7,9 @@ export default function EpisodeList({
   selectedEpisode,
   setSelectedEpisode,
 }) {
+      if (!episodes) {
+      return <p>select an episode</p>
+    } else {
   return (
     <section className="episodes">
       <h2>{name}</h2>
@@ -23,4 +26,5 @@ export default function EpisodeList({
       </ol>
     </section>
   );
+}
 }
